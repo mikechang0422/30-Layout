@@ -1,0 +1,194 @@
+html {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h2,
+h3 {
+  margin: 0.5rem;
+  text-align: center;
+}
+
+p {
+  margin: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.wrap {
+  padding-bottom: 200px;
+}
+
+.list1__false {
+  .menu {
+    text-align: center;
+    background-color: #000;
+
+    li {
+      display: inline-block;
+      padding: 10px 20px;
+
+      &:hover {
+        background-color: #fa0;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.list1__true {
+  .menu {
+    text-align: center;
+    background-color: #000;
+
+    li {
+      display: inline-block;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          background-color: #fa0;
+        }
+      }
+    }
+  }
+}
+
+.list2__false {
+  .menu {
+    text-align: center;
+    background-color: #000;
+
+    li {
+      position: relative;
+      display: inline-block;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          background-color: #fa0;
+        }
+      }
+    }
+  }
+}
+
+.list2__true {
+  .menu {
+    text-align: center;
+    background-color: #000;
+
+    li {
+      position: relative;
+      display: inline-block;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          background-color: #fa0;
+        }
+      }
+    }
+
+    .subMenu {
+      position: absolute;
+      background-color: #f00;
+    }
+  }
+}
+
+.list3__false {
+  margin-top: 200px;
+
+  .menu {
+    text-align: center;
+    background-color: #000;
+
+    li {
+      position: relative;
+      display: inline-block;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          background-color: #fa0;
+
+          + .subMenu {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .subMenu {
+      position: absolute;
+      display: none;
+      background-color: #f00;
+    }
+  }
+}
+
+.list3__true {
+  .menu {
+    text-align: center;
+    background-color: #000;
+
+    li {
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+        .subMenu {
+          display: block;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          background-color: #fa0;
+        }
+      }
+    }
+
+    .subMenu {
+      position: absolute;
+      display: none;
+      background-color: #f00;
+    }
+  }
+}

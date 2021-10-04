@@ -1,0 +1,183 @@
+html {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h2,
+h3 {
+  margin: 0.5rem;
+  text-align: center;
+}
+
+p {
+  margin: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.wrap {
+  padding-bottom: 200px;
+}
+
+.list1__false .menu {
+  text-align: center;
+  background-color: #000;
+}
+
+.list1__false .menu li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.list1__false .menu li:hover {
+  background-color: #fa0;
+}
+
+.list1__false .menu li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list1__true .menu {
+  text-align: center;
+  background-color: #000;
+}
+
+.list1__true .menu li {
+  display: inline-block;
+}
+
+.list1__true .menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list1__true .menu li a:hover {
+  background-color: #fa0;
+}
+
+.list2__false .menu {
+  text-align: center;
+  background-color: #000;
+}
+
+.list2__false .menu li {
+  position: relative;
+  display: inline-block;
+}
+
+.list2__false .menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list2__false .menu li a:hover {
+  background-color: #fa0;
+}
+
+.list2__true .menu {
+  text-align: center;
+  background-color: #000;
+}
+
+.list2__true .menu li {
+  position: relative;
+  display: inline-block;
+}
+
+.list2__true .menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list2__true .menu li a:hover {
+  background-color: #fa0;
+}
+
+.list2__true .menu .subMenu {
+  position: absolute;
+  background-color: #f00;
+}
+
+.list3__false {
+  margin-top: 200px;
+}
+
+.list3__false .menu {
+  text-align: center;
+  background-color: #000;
+}
+
+.list3__false .menu li {
+  position: relative;
+  display: inline-block;
+}
+
+.list3__false .menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list3__false .menu li a:hover {
+  background-color: #fa0;
+}
+
+.list3__false .menu li a:hover + .subMenu {
+  display: block;
+}
+
+.list3__false .menu .subMenu {
+  position: absolute;
+  display: none;
+  background-color: #f00;
+}
+
+.list3__true .menu {
+  text-align: center;
+  background-color: #000;
+}
+
+.list3__true .menu li {
+  position: relative;
+  display: inline-block;
+}
+
+.list3__true .menu li:hover .subMenu {
+  display: block;
+}
+
+.list3__true .menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list3__true .menu li a:hover {
+  background-color: #fa0;
+}
+
+.list3__true .menu .subMenu {
+  position: absolute;
+  display: none;
+  background-color: #f00;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hent-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -9,10 +10,132 @@
     <link rel="stylesheet" href="style/style.css">
     <title>30 LAYOUT-Day1</title>
 </head>
+
 <body>
-    <div class="warpper">
-        <h1>Hello World</h1>
+    <div class="wrap">
+        <div class="list1">
+            <section class="list1__false">
+                <h2>錯誤示範1</h2>
+                <h3>li + padding + hover</h3>
+                <p>換了顏色卻摸不到超連結</p>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="list1__true">
+                <h2>正確寫法</h2>
+                <h3>a + padding + hover</h3>
+                <p>用a撐開li</p>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+        <div class="list2">
+            <section class="list2__false">
+                <h2>錯誤示範2</h2>
+                <h3>ul > ul</h3>
+                <p>ul不能直接在ul，SEO會爆炸，畫面也會爆炸</p>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <ul class="subMenu">
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="list2__true">
+                <h2>正確寫法</h2>
+                <h3>ul>li>ul</h3>
+                <p>ul或ol下層為li然後在li裡再包其他的</p>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a>
+                            <ul class="subMenu">
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+        <div class="list3">
+            <section class="list3__false">
+                <h2>錯誤範例3</h2>
+                <h3>a hover + subMenu</h3>
+                <p>摸到a 出現subMenu 離開a就什麼都沒了</p>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a>
+                            <ul class="subMenu">
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="list3__true">
+                <h2>正確寫法</h2>
+                <h3>li hover + usbMenu</h3>
+                <p>用父層控制子層，因為ul也算li的一部分</p>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a>
+                            <ul class="subMenu">
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
     </div>
     <script src="./js/style.js"></script>
 </body>
+
 </html>
