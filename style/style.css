@@ -190,6 +190,10 @@ p {
   display: block;
 }
 
+.list3__better {
+  margin-top: 100px;
+}
+
 .list3__better .menu {
   text-align: center;
   background-color: #444;
@@ -225,5 +229,155 @@ p {
 
 .list3__better .menu .subMenu li {
   display: block;
+}
+
+.list3__other1 {
+  margin-top: 100px;
+}
+
+.list3__other1 .menu {
+  position: relative;
+  text-align: center;
+  background-color: #444;
+}
+
+.list3__other1 .menu li {
+  display: inline-block;
+}
+
+.list3__other1 .menu li:hover {
+  background-color: #f0a;
+}
+
+.list3__other1 .menu li:hover .subMenu {
+  height: auto;
+}
+
+.list3__other1 .menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list3__other1 .menu .subMenu {
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  background-color: #c0f;
+}
+
+.list3__other1 .menu .subMenu li {
+  display: inline-block;
+}
+
+.list3__other2 {
+  margin-top: 100px;
+}
+
+.list3__other2 .menu {
+  position: relative;
+  text-align: center;
+  background-color: #444;
+}
+
+.list3__other2 .menu li {
+  display: inline-block;
+}
+
+.list3__other2 .menu li:hover {
+  background-color: #f0a;
+}
+
+.list3__other2 .menu li:hover .subMenu {
+  height: auto;
+  -webkit-transform: perspective(30px) rotateX(0deg);
+          transform: perspective(30px) rotateX(0deg);
+  opacity: 1;
+}
+
+.list3__other2 .menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list3__other2 .menu .subMenu {
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  background-color: #c0f;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: perspective(30px) rotateX(-90deg);
+          transform: perspective(30px) rotateX(-90deg);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+}
+
+.list3__other2 .menu .subMenu li {
+  display: inline-block;
+}
+
+.list3__other2 .menu .subMenu li a {
+  padding: 20px 30px;
+}
+
+.list3__other3 {
+  margin-top: 100px;
+}
+
+.list3__other3 .menu {
+  position: relative;
+  text-align: center;
+  background-color: #444;
+}
+
+.list3__other3 .menu li {
+  display: inline-block;
+}
+
+.list3__other3 .menu li:hover {
+  background-color: #f0a;
+}
+
+.list3__other3 .menu li:hover .subMenu {
+  height: auto;
+  -webkit-transform: perspective(30px) rotateX(0deg);
+          transform: perspective(30px) rotateX(0deg);
+  opacity: 1;
+}
+
+.list3__other3 .menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list3__other3 .menu .subMenu {
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  background-color: #c0f;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: perspective(30px) rotateX(-90deg);
+          transform: perspective(30px) rotateX(-90deg);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+}
+
+.list3__other3 .menu .subMenu li {
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */
