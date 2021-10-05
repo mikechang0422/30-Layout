@@ -31,7 +31,7 @@ p {
 .list1__false {
   .menu {
     text-align: center;
-    background-color: #000;
+    background-color: #444;
 
     li {
       display: inline-block;
@@ -53,7 +53,7 @@ p {
 .list1__true {
   .menu {
     text-align: center;
-    background-color: #000;
+    background-color: #444;
 
     li {
       display: inline-block;
@@ -75,7 +75,7 @@ p {
 .list2__false {
   .menu {
     text-align: center;
-    background-color: #000;
+    background-color: #444;
 
     li {
       position: relative;
@@ -98,7 +98,7 @@ p {
 .list2__true {
   .menu {
     text-align: center;
-    background-color: #000;
+    background-color: #444;
 
     li {
       position: relative;
@@ -128,7 +128,7 @@ p {
 
   .menu {
     text-align: center;
-    background-color: #000;
+    background-color: #444;
 
     li {
       position: relative;
@@ -161,13 +161,15 @@ p {
 .list3__true {
   .menu {
     text-align: center;
-    background-color: #000;
+    background-color: #444;
 
     li {
       position: relative;
       display: inline-block;
 
       &:hover {
+        background-color: #f0a;
+
         .subMenu {
           display: block;
         }
@@ -180,7 +182,7 @@ p {
         color: #fff;
 
         &:hover {
-          background-color: #fa0;
+          background-color: #f0a;
         }
       }
     }
@@ -188,7 +190,51 @@ p {
     .subMenu {
       position: absolute;
       display: none;
-      background-color: #f00;
+      width: 8em;
+      background-color: #c0f;
+
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
+.list3__better {
+  .menu {
+    text-align: center;
+    background-color: #444;
+
+    li {
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+        background-color: #f0a;
+
+        .subMenu {
+          height: auto;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    .subMenu {
+      position: absolute;
+      overflow: hidden;
+      width: 8em;
+      height: 0;
+      background-color: #c0f;
+
+      li {
+        display: block;
+      }
     }
   }
 }

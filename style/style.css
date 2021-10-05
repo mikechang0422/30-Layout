@@ -30,7 +30,7 @@ p {
 
 .list1__false .menu {
   text-align: center;
-  background-color: #000;
+  background-color: #444;
 }
 
 .list1__false .menu li {
@@ -50,7 +50,7 @@ p {
 
 .list1__true .menu {
   text-align: center;
-  background-color: #000;
+  background-color: #444;
 }
 
 .list1__true .menu li {
@@ -70,7 +70,7 @@ p {
 
 .list2__false .menu {
   text-align: center;
-  background-color: #000;
+  background-color: #444;
 }
 
 .list2__false .menu li {
@@ -91,7 +91,7 @@ p {
 
 .list2__true .menu {
   text-align: center;
-  background-color: #000;
+  background-color: #444;
 }
 
 .list2__true .menu li {
@@ -121,7 +121,7 @@ p {
 
 .list3__false .menu {
   text-align: center;
-  background-color: #000;
+  background-color: #444;
 }
 
 .list3__false .menu li {
@@ -152,12 +152,16 @@ p {
 
 .list3__true .menu {
   text-align: center;
-  background-color: #000;
+  background-color: #444;
 }
 
 .list3__true .menu li {
   position: relative;
   display: inline-block;
+}
+
+.list3__true .menu li:hover {
+  background-color: #f0a;
 }
 
 .list3__true .menu li:hover .subMenu {
@@ -172,12 +176,54 @@ p {
 }
 
 .list3__true .menu li a:hover {
-  background-color: #fa0;
+  background-color: #f0a;
 }
 
 .list3__true .menu .subMenu {
   position: absolute;
   display: none;
-  background-color: #f00;
+  width: 8em;
+  background-color: #c0f;
+}
+
+.list3__true .menu .subMenu li {
+  display: block;
+}
+
+.list3__better .menu {
+  text-align: center;
+  background-color: #444;
+}
+
+.list3__better .menu li {
+  position: relative;
+  display: inline-block;
+}
+
+.list3__better .menu li:hover {
+  background-color: #f0a;
+}
+
+.list3__better .menu li:hover .subMenu {
+  height: auto;
+}
+
+.list3__better .menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list3__better .menu .subMenu {
+  position: absolute;
+  overflow: hidden;
+  width: 8em;
+  height: 0;
+  background-color: #c0f;
+}
+
+.list3__better .menu .subMenu li {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

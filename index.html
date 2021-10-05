@@ -115,6 +115,7 @@
                 <h2>正確寫法</h2>
                 <h3>li hover + usbMenu</h3>
                 <p>用父層控制子層，因為ul也算li的一部分</p>
+                <p>並且li + background-color來讓使用者資料目前的資料是屬於哪個類別的</p>
                 <nav class="nav">
                     <ul class="menu">
                         <li><a href="#">link</a></li>
@@ -133,6 +134,31 @@
                     </ul>
                 </nav>
             </section>
+            <section class="list3__better">
+                <h2>優化寫法</h2>
+                <h3>usbMenu & li</h3>
+                <p>不要display none因為SEO會扣分，改用left -1000 至 0 但效能比較不好</p>
+                <p>或改用 height:0 overflow:hidden</p>
+                <p>li hover a的設定拔掉，全設在li上面一樣可以</p>
+                <nav class="nav">
+                    <ul class="menu">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a>
+                            <ul class="subMenu">
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </nav>
+            </section>
+
         </div>
     </div>
     <script src="./js/style.js"></script>
