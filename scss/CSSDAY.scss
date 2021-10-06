@@ -1,0 +1,80 @@
+body {
+  background-size: 10px 10px;
+  background-image: linear-gradient(to left, #ccc 1px, transparent 1px), linear-gradient(to bottom, #ccc 1px, transparent 1px);
+}
+
+html {
+  font-size: 100px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.px {
+  font-size: 50px;
+}
+
+.em {
+  font-size: 0.5em;
+}
+
+.rem {
+  font-size: 1rem;
+}
+
+.fifty {
+  font-size: 50%;
+}
+
+.viewport-height {
+  font-size: 5vh;
+}
+
+.viewport-width {
+  font-size: 5vw;
+}
+
+.viewport-max {
+  font-size: 5vmax;
+}
+
+.viewport-min {
+  font-size: 5vmin;
+}
+
+.cm {
+  font-size: 1cm;
+}
+
+.mm {
+  font-size: 1mm;
+}
+
+.pt {
+  font-size: 1pt;
+}
+
+.pc {
+  font-size: 1pc;
+}
+
+.in {
+  font-size: 1in;
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 40px;
+  }
+}
