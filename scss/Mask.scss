@@ -11,6 +11,7 @@ html {
 
 .wrap {
   position: relative;
+  user-select: none;
 
   &::after {
     position: absolute;
