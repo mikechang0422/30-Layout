@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="style/reset.css">
+    <title>JSDom</title>
+</head>
+
+<body>
+    <h2 style="font-size: 2rem;">第一部分</h2>
+    <p class="DisNone">Hello <span style="display: none;"> I am None</span> Word!!!!!</p>
+    <div class="content">
+        <!-- 從這裡開始的換行都有包括 -->
+        <p>
+            1<br>2<br>3<span style="display: none;">.5 </span><br>4
+            5
+            6
+            7
+            8
+        </p>
+    </div>
+    <hr>
+    <h2 style="font-size: 2rem;">第二部分</h2>
+    <div id="learnDom">
+        <span class="HIHI HI2" id="HI" title="HEY" style="color: #0ff;">HI</span> 
+        <span id="BYE" title="BYE" data-set="this is a test" data-time="02:13">BYE</span>
+    </div>
+    <hr>
+    <script src="./js/JSDom.js"></script>
+</body>
+
+</html>
