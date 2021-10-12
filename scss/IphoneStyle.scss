@@ -29,7 +29,7 @@ $height: 80vh;
     }
 
     &::before {
-      filter: hue-rotate(calc(var(--slide) /10 * 3deg));//grayscale(%)灰度 blur(%)則為毛玻璃 brightness(%)亮度 contrast() 對比度 hue-rotate(deg)色相旋轉 invert(%)鏡像 saturate(%)飽和度 opacity(%)透明度 可複合
+      filter: hue-rotate(calc(var(--slide) / 10 * 3deg));//grayscale(%)灰度 blur(%)則為毛玻璃 brightness(%)亮度 contrast() 對比度 hue-rotate(deg)色相旋轉 invert(%)鏡像 saturate(%)飽和度 opacity(%)透明度 可複合
     }
 
     &::after {
