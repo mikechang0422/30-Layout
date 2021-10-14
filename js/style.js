@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 //IphoneStyle
 //section2
 let section2H2 = document.querySelector('.logostyle')

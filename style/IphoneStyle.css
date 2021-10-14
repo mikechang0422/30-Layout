@@ -178,4 +178,32 @@ html {
   border-color: #40e0d0;
   cursor: pointer;
 }
+
+.section4 {
+  margin: 200px 0;
+}
+
+.section4 .sticky__table {
+  position: relative;
+  width: 100%;
+}
+
+.section4 .sticky__table td,
+.section4 .sticky__table th {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #0c070f;
+}
+
+.section4 .sticky__table th {
+  color: #fff;
+  background-color: #0c070f;
+}
+
+.section4 .sticky__table thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 /*# sourceMappingURL=IphoneStyle.css.map */
