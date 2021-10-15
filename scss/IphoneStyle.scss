@@ -152,38 +152,3 @@ html {
     }
   }
 }
-
-.section4 {
-  margin: 100px 0;
-
-  .sticky__table {
-    position: relative;
-    margin: 0 auto;
-    width: 50%;
-
-    td,
-    th {
-      padding: 10px;
-      width: 100%;
-      text-align: center;
-      border: 1px solid #0c070f;
-    }
-
-    th {
-      color: #fff;
-      background-color: #0c070f;
-    }
-
-    thead {
-      position: sticky;
-      top: 0;
-    }
-  }
-
-  p {
-    margin: 0 auto;
-    width: 50%;
-    font-size: 1.5rem;
-    line-height: 2;
-  }
-}

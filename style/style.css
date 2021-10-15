@@ -445,4 +445,40 @@ p {
 .list4__true .menu .subMenu .subMenu li {
   display: block;
 }
+
+.section1 {
+  margin: 100px 0;
+}
+
+.section1 .sticky__table {
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.section1 .sticky__table td,
+.section1 .sticky__table th {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #0c070f;
+}
+
+.section1 .sticky__table th {
+  color: #fff;
+  background-color: #0c070f;
+}
+
+.section1 .sticky__table thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.section1 p {
+  margin: 0 auto;
+  width: 50%;
+  font-size: 1.5rem;
+  line-height: 2;
+}
 /*# sourceMappingURL=style.css.map */
