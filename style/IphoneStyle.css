@@ -103,9 +103,9 @@ html {
   margin: 0;
   font-size: 3rem;
   font-family: Helvetica, sans-serif;
-  color: #edeef0;
   color: transparent;
   background-size: 300% 100%;
+  -webkit-background-clip: text;
   background-clip: text;
   background-position-x: calc(100% - var(--percentage));
   letter-spacing: -0.3px;
@@ -181,12 +181,13 @@ html {
 }
 
 .section4 {
-  margin: 200px 0;
+  margin: 100px 0;
 }
 
 .section4 .sticky__table {
   position: relative;
-  width: 100%;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .section4 .sticky__table td,
@@ -206,5 +207,12 @@ html {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+
+.section4 p {
+  margin: 0 auto;
+  width: 50%;
+  font-size: 1.5rem;
+  line-height: 2;
 }
 /*# sourceMappingURL=IphoneStyle.css.map */
