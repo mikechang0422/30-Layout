@@ -41,7 +41,7 @@ html {
     border-radius: 4%;
     transition: 0.3s;
     text-transform: capitalize;
-    -webkit-box-reflect: below 1px linear-gradient(180deg, transparent, transparent, #0004);
+    -webkit-box-reflect: below 1px linear-gradient(180deg, transparent, transparent, #0004);//反射 180%時看起來就跟鏡像一樣
 
     &::before {
       position: absolute;
