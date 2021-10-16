@@ -1,0 +1,135 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: -3px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.wrap {
+  background-color: #122239;
+}
+
+.h1 {
+  padding-top: 4rem;
+  font-size: 4rem;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(30deg, white, #d13cf7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.buttons a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  padding: 2rem 4rem;
+  margin: 2rem;
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-transform: capitalize;
+  -webkit-box-reflect: below 1px linear-gradient(180deg, transparent, transparent, #0004);
+}
+
+.buttons a::before {
+  position: absolute;
+  width: 2rem;
+  height: 20rem;
+  background-color: var(--clr);
+  -webkit-transition: 1s;
+  transition: 1s;
+  content: '';
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+  -webkit-animation-delay: calc(0.33s * var(--i));
+          animation-delay: calc(0.33s * var(--i));
+}
+
+.buttons a::after {
+  position: absolute;
+  background-color: #122239;
+  content: '';
+  inset: 4px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.buttons a:hover {
+  background-color: var(--clr);
+  -webkit-box-shadow: 0 0 15px var(--clr), 0 0 30px var(--clr), 0 0 45px var(--clr), 0 0 60px var(--clr);
+          box-shadow: 0 0 15px var(--clr), 0 0 30px var(--clr), 0 0 45px var(--clr), 0 0 60px var(--clr);
+}
+
+.buttons a:hover::before {
+  width: 100%;
+}
+
+.buttons a:hover::after {
+  background-color: var(--clr);
+}
+
+.buttons a:hover span {
+  opacity: 1;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.buttons a span {
+  position: relative;
+  z-index: 1;
+  color: #fffaf0;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+/*# sourceMappingURL=Day2.css.map */
