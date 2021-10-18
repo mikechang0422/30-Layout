@@ -1,0 +1,125 @@
+:root {
+  --body-width: 480px;
+  --card-width: 420px;
+  --card-height: 280px;
+  --img-height: 226px;
+  --img-height-expanded: 320px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 4rem;
+  text-align: center;
+  color: transparent;
+  background-image: linear-gradient(45deg, #c9710c, #6d4406);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  margin: 0 auto;
+  width: var(--body-width);
+  min-height: 100vh;
+  background-color: #eee;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+.card {
+  margin: 1rem 0;
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: #fff;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s cubic-bezier(0, 1, 0.95, 1.05);
+  transition: all 0.3s cubic-bezier(0, 1, 0.95, 1.05);
+  cursor: pointer;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: var(--img-height);
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card h4 {
+  padding: 0.8rem 1.2rem;
+  padding-bottom: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  background-color: #fff;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: -0.5px;
+}
+
+.card .content-wrapper {
+  overflow: hidden;
+  height: 0;
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card .content-wrapper .content {
+  overflow: auto;
+  padding: 0 1.2rem;
+  background-color: #fff;
+}
+
+.card p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.card.active {
+  -webkit-transform: translateY(var(--data-offset-top)) scale(calc(480 / 420));
+          transform: translateY(var(--data-offset-top)) scale(calc(480 / 420));
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  border-radius: 0;
+}
+
+.card.active h4 {
+  padding-bottom: 0.8rem;
+}
+
+.card.active img {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: var(--img-height-expanded);
+}
+
+.card.active .content-wrapper {
+  height: 100vh;
+  opacity: 1;
+  -webkit-transition: 0.3s all ease-in;
+  transition: 0.3s all ease-in;
+}
+/*# sourceMappingURL=Day4.css.map */

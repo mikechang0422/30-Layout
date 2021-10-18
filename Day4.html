@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hent-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/Day4.css">
+    <title>30 LAYOUT-Day4</title>
+</head>
+
+<body>
+    <h1 class="h1">App Store</h1>
+    <div class="card">
+        <img src="https://picsum.photos/900/600?random=5">
+        <h4>App Of The Day</h4>
+        <div class="content-wrapper">
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/900/600?random=7">
+        <h4>App Of The Day</h4>
+        <div class="content-wrapper">
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/900/600?random=8">
+        <h4>App Of The Day</h4>
+        <div class="content-wrapper">
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/900/600?random=9">
+        <h4>App Of The Day</h4>
+        <div class="content-wrapper">
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis distinctio dolorum quam minus earum voluptatem hic, magnam nihil voluptatum tenetur, error odit ratione sed cupiditate, quaerat dolor adipisci! Praesentium, nihil?</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js' integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==' crossorigin='anonymous'></script>
+<script>
+    $('.card').on('click',function(e){
+        let card = $(e.currentTarget);
+        //卡片的頭頂-頁面的頂部=要捲動的距離
+        let cardOffsetScrolltop = $(card).offset().top - $(window).scrollTop();
+        //將計算出來的距離射程css變數並* -1 + px
+        $(card).css('--data-offset-top',cardOffsetScrolltop * -1 + 'px');
+        $(card).toggleClass('active');
+        //內文高度
+        let height = $(window).height();
+        let ratio = 480 / 420;
+        //設高 = 視窗高 - 卡片高*放大 - 標題高*放大
+        height -=$(card).find('img').outerHeight() * ratio;
+        height -= $(card).find('h4').outerHeight() * ratio;
+        height /= ratio
+        //套用至content
+        $(card).find('.content').css('height',height);
+        //滿版時不給捲動
+        if($(card).hasClass('active')){
+            $('body').addClass('noscroll');
+        }else{
+            $('body').removeClass('noscroll');
+        };
+    })
+</script>
+</html>
