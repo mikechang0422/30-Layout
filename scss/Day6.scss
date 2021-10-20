@@ -2,7 +2,7 @@
 
 body {
   overflow: hidden;
-  background-color: #b62256;
+  background-color: #f56597;
   box-sizing: border-box;
 }
 
@@ -25,7 +25,7 @@ section {
   align-items: center;
   width: 100%;
   height: calc(100vh - 6rem);
-  background-image: linear-gradient(to bottom, #ff4b8b, #dff1ff);
+  background-image: linear-gradient(to bottom, #fc88b1, #dff1ff);
 
   &::before {
     position: absolute;
