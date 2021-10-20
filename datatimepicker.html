@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hent-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.15.3/css/all.css'>
+    <title>datatimepicker</title>
+    <style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+    </style>
+</head>
+<body>
+    <h2><a href="https://getdatepicker.com/4/">教學網址在這裡~~~~~~~~~~~~~~~</a></h2>
+    <div class="container">
+        <div class='col-md-5'>
+            <h2>Start Time</h2>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker6'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-5'>
+            <h2>End Time</h2>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker7'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-sm-6" style="height: 130px;">
+            <h2>Use Icon</h2>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker8'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                    <span class="fa fa-calendar">
+                    </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/zh-tw.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker6').datetimepicker();
+            $('#datetimepicker7').datetimepicker({
+        useCurrent: false //Important! See issue #1075
+        });
+            $("#datetimepicker6").on("dp.change", function (e) {
+                $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datetimepicker7").on("dp.change", function (e) {
+                $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker8').datetimepicker({
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
