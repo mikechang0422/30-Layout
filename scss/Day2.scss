@@ -214,13 +214,13 @@ html {
       height: 120px;
       background: #fff;
       border-radius: 50%;
-      animation: animate 5s linear infinite;
+      animation: cupanimate 5s linear infinite;
       opacity: 0;
       filter: blur(8px);
-      animation-delay: calc(var(--i) * 0.5s);
+      animation-delay: calc(var(--j) * 0.5s);
     }
 
-    @keyframes animate {
+    @keyframes cupanimate {
       0% {
         transform: translateY(0) scaleX(1);
         opacity: 0;

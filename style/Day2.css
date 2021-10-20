@@ -268,16 +268,38 @@ html {
   height: 120px;
   background: #fff;
   border-radius: 50%;
-  -webkit-animation: animate 5s linear infinite;
-          animation: animate 5s linear infinite;
+  -webkit-animation: cupanimate 5s linear infinite;
+          animation: cupanimate 5s linear infinite;
   opacity: 0;
   -webkit-filter: blur(8px);
           filter: blur(8px);
-  -webkit-animation-delay: calc(var(--i) * 0.5s);
-          animation-delay: calc(var(--i) * 0.5s);
+  -webkit-animation-delay: calc(var(--j) * 0.5s);
+          animation-delay: calc(var(--j) * 0.5s);
 }
 
-@keyframes animate {
+@-webkit-keyframes cupanimate {
+  0% {
+    -webkit-transform: translateY(0) scaleX(1);
+            transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(-150px) scaleX(5);
+            transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-300px) scaleX(10);
+            transform: translateY(-300px) scaleX(10);
+  }
+}
+
+@keyframes cupanimate {
   0% {
     -webkit-transform: translateY(0) scaleX(1);
             transform: translateY(0) scaleX(1);
