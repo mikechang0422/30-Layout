@@ -1,0 +1,192 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #350048;
+}
+
+h1 {
+  padding: 1rem 0;
+  font-size: 4rem;
+  text-align: center;
+  color: transparent;
+  background-image: linear-gradient(-10deg, #ff2cdc, #fbff19);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+  -webkit-animation: animateBg 5s linear infinite;
+          animation: animateBg 5s linear infinite;
+}
+
+@-webkit-keyframes animateBg {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animateBg {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  height: calc(100vh - 6rem);
+}
+
+section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section .container .btn {
+  position: relative;
+  margin: 2rem;
+  width: 20%;
+  height: 50px;
+}
+
+section .container .btn a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  -webkit-box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 400;
+  letter-spacing: 1px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+
+section .container .btn a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  content: '';
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.15)), to(transparent));
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  -webkit-transform: skewX(45deg) translateX(0);
+          transform: skewX(45deg) translateX(0);
+}
+
+section .container .btn:hover a {
+  letter-spacing: 3px;
+  -webkit-box-reflect: below 3px linear-gradient(transparent, transparent, rgba(255, 255, 255, 0.75));
+}
+
+section .container .btn:hover a::before {
+  -webkit-transform: skewX(45deg) translateX(200%);
+          transform: skewX(45deg) translateX(200%);
+}
+
+section .container .btn::before, section .container .btn::after {
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: '';
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+section .container .btn::before {
+  bottom: -5px;
+}
+
+section .container .btn::after {
+  top: -5px;
+}
+
+section .container .btn:hover::before, section .container .btn:hover::after {
+  width: 80%;
+  height: 50%;
+  border-radius: 30px;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+section .container .btn:hover::before {
+  bottom: 0;
+}
+
+section .container .btn:hover::after {
+  top: 0;
+}
+
+section .container .btn:nth-child(1)::before, section .container .btn:nth-child(1)::after {
+  background-color: #ff1f71;
+  -webkit-box-shadow: 0 0 5px #ff1f71, 0 0 25px #ff1f71, 0 0 45px #ff1f71;
+          box-shadow: 0 0 5px #ff1f71, 0 0 25px #ff1f71, 0 0 45px #ff1f71;
+}
+
+section .container .btn:nth-child(2)::before, section .container .btn:nth-child(2)::after {
+  background-color: #1ffff4;
+  -webkit-box-shadow: 0 0 5px #1ffff4, 0 0 25px #1ffff4, 0 0 45px #1ffff4;
+          box-shadow: 0 0 5px #1ffff4, 0 0 25px #1ffff4, 0 0 45px #1ffff4;
+}
+
+section .container .btn:nth-child(3)::before, section .container .btn:nth-child(3)::after {
+  background-color: #ff791f;
+  -webkit-box-shadow: 0 0 5px #ff791f, 0 0 25px #ff791f, 0 0 45px #ff791f;
+          box-shadow: 0 0 5px #ff791f, 0 0 25px #ff791f, 0 0 45px #ff791f;
+}
+/*# sourceMappingURL=Day8.css.map */
