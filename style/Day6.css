@@ -122,7 +122,8 @@ ul li a {
   backdrop-filter: blur(4px);
 
   /* -webkit-transition: top 0.5s, z-index 0.5s, -webkit-transform 0.5s; */
-  transition: top 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+
+  /* transition: top 0.5s, z-index 0.5s, -webkit-transform 0.5s; */
   transition: top 0.5s, z-index 0.5s, transform 0.5s;
 
   /* transition: top 0.5s, z-index 0.5s, transform 0.5s, -webkit-transform 0.5s; */
