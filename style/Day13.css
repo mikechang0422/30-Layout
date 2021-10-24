@@ -1,0 +1,107 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #042104;
+  -webkit-animation: animateBgColor 10s linear infinite;
+          animation: animateBgColor 10s linear infinite;
+}
+
+.loader {
+  position: relative;
+}
+
+.loader span {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: rotate(calc(18deg * var(--i)));
+          transform: rotate(calc(18deg * var(--i)));
+}
+
+.loader span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #00ff0a;
+  border-radius: 50%;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+  -webkit-animation-delay: calc(-0.1s * var(--i));
+          animation-delay: calc(-0.1s * var(--i));
+  -webkit-box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a, 0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+          box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a, 0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateX(0) scale(0.5);
+            transform: translateX(0) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(200px) scale(1);
+            transform: translateX(200px) scale(1);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(0.5);
+            transform: translateX(0) scale(0.5);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateX(0) scale(0.5);
+            transform: translateX(0) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(200px) scale(1);
+            transform: translateX(200px) scale(1);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(0.5);
+            transform: translateX(0) scale(0.5);
+  }
+}
+
+@-webkit-keyframes animateBgColor {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animateBgColor {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+/*# sourceMappingURL=Day13.css.map */
