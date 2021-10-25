@@ -1,10 +1,9 @@
-@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
-
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
 body {
   overflow: hidden;
   background-color: #f56597;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1 {
@@ -16,8 +15,8 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 900;
-  -webkit-animation: animatebg 15s linear infinite;
-  animation: animateBg 15s linear infinite;
+  -webkit-animation: animateBg 15s linear infinite;
+          animation: animateBg 15s linear infinite;
 }
 
 section {
@@ -26,11 +25,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: calc(100vh - 6rem);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fc88b1), to(#dff1ff));
@@ -47,13 +46,13 @@ section::before {
   content: '';
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 section .color {
   position: absolute;
   -webkit-filter: blur(200px);
-  filter: blur(200px);
+          filter: blur(200px);
 }
 
 section .color:nth-child(1) {
@@ -100,11 +99,11 @@ ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
   width: 100px;
   height: 100px;
@@ -115,29 +114,26 @@ ul li a {
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 10px;
   -webkit-box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-
-  /* -webkit-transition: top 0.5s, z-index 0.5s, -webkit-transform 0.5s; */
-
-  /* transition: top 0.5s, z-index 0.5s, -webkit-transform 0.5s; */
+          backdrop-filter: blur(4px);
+  -webkit-transition: top 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+  transition: top 0.5s, z-index 0.5s, -webkit-transform 0.5s;
   transition: top 0.5s, z-index 0.5s, transform 0.5s;
-
-  /* transition: top 0.5s, z-index 0.5s, transform 0.5s, -webkit-transform 0.5s; */
+  transition: top 0.5s, z-index 0.5s, transform 0.5s, -webkit-transform 0.5s;
   -webkit-transition-delay: 0.5s, 0s, 0s;
-  transition-delay: 0.5s, 0s, 0s;
+          transition-delay: 0.5s, 0s, 0s;
 }
 
 ul li a:hover {
   top: -60px;
   -webkit-transform: translateY(60px);
-  transform: translateY(60px);
+          transform: translateY(60px);
   z-index: 3;
   -webkit-transition-delay: 0s, 0.5s, 0.5s;
-  transition-delay: 0s, 0.5s, 0.5s;
+          transition-delay: 0s, 0.5s, 0.5s;
 }
 
 ul li a::before {
@@ -151,34 +147,33 @@ ul li a::before {
   transition: 0.5s;
   content: '';
   -webkit-transform: skewX(45deg) translateX(150px);
-  transform: skewX(45deg) translateX(150px);
+          transform: skewX(45deg) translateX(150px);
 }
 
 ul li a:hover::before {
   -webkit-transform: skewX(45deg) translateX(-150px);
-  transform: skewX(45deg) translateX(-150px);
+          transform: skewX(45deg) translateX(-150px);
+}
+
+@-webkit-keyframes animateBg {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
 }
 
 @keyframes animateBg {
   0% {
     -webkit-filter: hue-rotate(0deg);
-    filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
   }
-
   100% {
     -webkit-filter: hue-rotate(360deg);
-    filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
   }
 }
-
-@keyframes animateBg {
-  0% {
-    -webkit-filter: hue-rotate(0deg);
-    filter: hue-rotate(0deg);
-  }
-
-  100% {
-    -webkit-filter: hue-rotate(360deg);
-    filter: hue-rotate(360deg);
-  }
-}
+/*# sourceMappingURL=Day6.css.map */
