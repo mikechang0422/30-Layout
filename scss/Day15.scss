@@ -1,0 +1,162 @@
+@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #131313;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d;
+
+    .box{
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background-color: #232323;
+        border-radius: 20px;
+        transform-style: preserve-3d;
+        margin: 2rem;
+
+        .name{
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            font-size: 2rem;
+            font-weight: 900;
+            transform-style: preserve-3d;
+            transform: translate3d(0,0,75px);
+            transition: 0.5s;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        .buy{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform-style: preserve-3d;
+            transform: translate3d(-50%,0,75px);
+            color: #fff;
+            background-color: #333333;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.5s;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        .circle{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            transition: 0.5s;
+            background-color: #fff;
+            z-index: 10;
+            opacity: 1;
+            transform-style: preserve-3d;
+            transform: translate3d(-50%,-50%,50px); 
+            
+        }
+
+        .product{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            min-width: 300px;
+            transition: 0.5s;
+            z-index: 20;
+            opacity: 1;
+            transform-style: preserve-3d;
+            transform: translate3d(-50%,-50%,100px) rotate(-15deg);
+        }
+
+        &:nth-child(1){
+            .circle,.buy{
+                background-color: #379bf7;
+            }
+            .product{
+                filter: hue-rotate(120deg);
+            }
+        }
+
+        &:nth-child(2){
+            .circle,.buy{
+                background-color: #9bdc28;
+            }
+        }
+
+        &:nth-child(3){
+            .circle,.buy{
+                background-color: #ffaaff;
+            }
+            .product{
+                filter: hue-rotate(240deg);
+            }
+        }
+
+        &::before,&::after{
+            position: absolute;
+            font-size: 5em;
+            font-weight: 900;
+            color: #fff;
+            font-style: italic;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        &::before{
+            content: 'Love';
+            top: 20px;
+            left: 20px;
+
+        }
+
+        &::after{
+            content: 'Live';
+            bottom: 20px;
+            right: 20px;
+
+        }
+
+        &:hover::before,&:hover::after{
+            opacity: 0.4;
+        }
+
+        &:hover{
+            .name{
+                top: 40px;
+                opacity: 1;
+            }
+
+            .buy{
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            .product{
+            transform: translate3d(-50%,-50%,100px) rotate(15deg);
+            }
+        }
+    }
+}
