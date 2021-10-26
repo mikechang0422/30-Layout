@@ -135,7 +135,7 @@ body {
 }
 
 .container .box:nth-child(3) .circle, .container .box:nth-child(3) .buy {
-  background-color: #ffaaff;
+  background-color: #fc80fc;
 }
 
 .container .box:nth-child(3) .product {
