@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hent-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/Day19.css">
+    <title>30 LAYOUT-Day19 3D Parallax Tilt Effect</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="imgBx">
+                <img src="https://picsum.photos/450/300?random=1">
+            </div>
+            <div class="contentBx">
+                <h2>Tilt Box Hover Effects</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga tempora cumque possimus nulla accusamus modi et non mollitia officiis placeat provident impedit, sit sequi similique corporis inventore quae natus maiores?</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="https://picsum.photos/450/300?random=11">
+            </div>
+            <div class="contentBx">
+                <h2>Tilt Box Hover Effects</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga tempora cumque possimus nulla accusamus modi et non mollitia officiis placeat provident impedit, sit sequi similique corporis inventore quae natus maiores?</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js' integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.babel.min.js' integrity='sha512-DNVOYiDsykJh2ljbJI5/jvIMeJjqoa3PfGY3FSEnEZG/D5c7wMf8P7rQ4cNAIS6qaKTzjylHyq2guJiGrTVW6w==' crossorigin='anonymous'></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+		max: 25,
+		speed: 400
+	});
+</script>
+</html>
