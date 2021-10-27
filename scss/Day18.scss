@@ -1,0 +1,81 @@
+@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #001300;
+    animation: changeColor 3s linear infinite;
+}
+
+.loader{
+    position: relative;
+
+    .dot{
+        position: relative;
+        display: inline-block;
+        width: 2vw;
+        height: 2vh;
+        background-color: #ffa;
+        margin: 20px 10px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #ffc,0 0 20px #ffc,0 0 40px #ffc,0 0 60px #ffc,0 0 80px #ffc;
+        animation: animateDot 2s linear infinite;
+        filter: hue-rotate(calc( 30deg * var(--i)));
+        animation-delay: calc(0.1s * var(--i));
+        margin: 0 1rem;
+        
+    }
+    &:last-child{
+        .dot{
+            animation-delay: calc(-0.1s * var(--i) - 0.1s);
+        }
+    }
+
+}
+h2{
+    color: #ffc;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1rem;
+    padding: 3rem 0;
+}
+
+@keyframes animateDot {
+    0%{
+        transform: scale(0.1);
+    }
+    
+    10%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(0.1) translateY(50px);
+    }
+
+    100%{
+        transform: scale(0.1) translateX(100px);
+    }
+
+}
+
+@keyframes changeColor {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
