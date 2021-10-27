@@ -38,7 +38,7 @@ section {
   width: 2vw;
   height: 2vh;
   background-color: #ffa;
-  margin: 20px 10px;
+  margin: 0 3vw;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 10px #ffc,0 0 20px #ffc,0 0 40px #ffc,0 0 60px #ffc,0 0 80px #ffc;
           box-shadow: 0 0 10px #ffc,0 0 20px #ffc,0 0 40px #ffc,0 0 60px #ffc,0 0 80px #ffc;
@@ -48,7 +48,6 @@ section {
           filter: hue-rotate(calc( 30deg * var(--i)));
   -webkit-animation-delay: calc(0.1s * var(--i));
           animation-delay: calc(0.1s * var(--i));
-  margin: 0 1rem;
 }
 
 .loader:last-child .dot {
@@ -58,11 +57,11 @@ section {
 
 h2 {
   color: #ffc;
-  font-size: 3rem;
+  font-size: 7vw;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 1rem;
-  padding: 3rem 0;
+  padding: 10vh 0;
 }
 
 @-webkit-keyframes animateDot {
