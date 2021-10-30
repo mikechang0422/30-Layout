@@ -1,0 +1,60 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(30deg, #fff, #000);
+}
+
+.box {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 3000px;
+          perspective: 3000px;
+}
+
+.box img {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+  width: 100%;
+  height: 100%;
+  border-radius: 2vh;
+  -webkit-box-shadow: 10px -10px 40px rgba(255, 255, 255, 0.7), 10px -10px 60px rgba(255, 255, 255, 0.6), 10px -10px 80px rgba(255, 255, 255, 0.5), -10px 10px 40px rgba(0, 0, 0, 0.7), -10px 10px 60px rgba(0, 0, 0, 0.6), -10px 10px 80px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px -10px 40px rgba(255, 255, 255, 0.7), 10px -10px 60px rgba(255, 255, 255, 0.6), 10px -10px 80px rgba(255, 255, 255, 0.5), -10px 10px 40px rgba(0, 0, 0, 0.7), -10px 10px 60px rgba(0, 0, 0, 0.6), -10px 10px 80px rgba(0, 0, 0, 0.5);
+}
+
+.box img:nth-child(2) {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.box:hover img:nth-child(1) {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.box:hover img:nth-child(2) {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+/*# sourceMappingURL=Day21.css.map */

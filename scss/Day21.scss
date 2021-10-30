@@ -1,0 +1,53 @@
+@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(30deg,#fff,#000);
+}
+.box{
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    transform-style: preserve-3d;
+    perspective: 3000px;
+    
+    img{
+        position: absolute;
+        backface-visibility: hidden;
+        transition: 1s;
+        width: 100%;
+        height: 100%;
+        border-radius: 2vh;
+        box-shadow: 10px -10px 40px rgba(255, 255, 255,0.7),
+        10px -10px 60px rgba(255, 255, 255,0.6),
+        10px -10px 80px rgba(255, 255, 255,0.5),
+        -10px 10px 40px rgba(0, 0, 0,0.7),
+        -10px 10px 60px rgba(0, 0, 0,0.6),
+        -10px 10px 80px rgba(0, 0, 0,0.5);
+
+        &:nth-child(2){
+            transform: rotateY(180deg);
+        }
+    }
+
+    &:hover{
+        img{
+            &:nth-child(1){
+                transform: rotateY(180deg);
+            }
+            
+            &:nth-child(2){
+                transform: rotateY(0deg);
+            }
+        }
+    }
+}
