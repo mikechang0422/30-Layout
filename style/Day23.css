@@ -1,0 +1,67 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Irish Grover', cursive;
+}
+
+body {
+  background-color: #010405;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-box-reflect: below 1px linear-gradient(180deg, transparent, transparent, #0005);
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 4, 5, 0.5)), to(transparent));
+  background: linear-gradient(to top, rgba(1, 4, 5, 0.5), transparent);
+  z-index: 1000;
+}
+
+section #bats {
+  z-index: 15;
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  text-align: center;
+}
+
+.sec h2 {
+  font-size: 5rem;
+  color: #ff9425;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  font-family: 'Irish Grover', cursive;
+  margin-bottom: 1rem;
+}
+
+.sec p {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  font-family: consolas;
+}
+/*# sourceMappingURL=Day23.css.map */

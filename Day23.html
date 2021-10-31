@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hent-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/Day23.css">
+    <title>30 LAYOUT-Day23 Parallax Webside</title>
+</head>
+<body>
+    <section>
+        <img src="./images/bg.jpg" alt="bg.jpg" id="bg">
+        <img src="./images/bats.png" alt="bats.png" id="bats">
+        <img src="./images/castle.png" alt="castle.png" id="castle">
+        <img src="./images/img.png" alt="img.png".png" id="img">
+        <img src="./images/wolf.png" alt="wolf.png" id="wolf">
+
+    </section>
+    <div class="sec">
+        <div class="content">
+            <h2>Happy Halloween</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A laboriosam sunt porro aliquam eaque consectetur, quis atque pariatur voluptatum possimus exercitationem earum! Nulla, suscipit est. Accusantium tenetur, architecto quam eveniet neque consequatur suscipit dolorum natus nemo nesciunt laboriosam repellat possimus, odit asperiores aperiam quo, id ratione enim alias quas in consectetur. Optio, quia. Aliquam temporibus aspernatur dolores in velit tempora, illo ad blanditiis saepe reprehenderit necessitatibus inventore hic culpa minus excepturi aut error ratione consequatur quo nobis odio sit animi corrupti. Ullam, ipsa! Officia aliquid esse fugiat consequuntur modi ipsum adipisci architecto veniam reprehenderit, porro a doloremque animi ut iure?</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.to('#img',{
+            scrollTrigger : {
+                scrub: 0.5,
+            },
+            x: 1500,
+            y: 500,
+            scale: 0.8,
+        })
+
+        gsap.from('#wolf',{
+            scrollTrigger : {
+                scrub: 0.5,
+            },
+            x: 400,
+            scale: 1.5,
+        })
+
+        gsap.from('#castle',{
+            scrollTrigger : {
+                scrub: 0.5,
+            },
+            x: -100,
+            scale: 1.2,
+        })
+
+        gsap.to('#bats',{
+            scrollTrigger : {
+                scrub: 0.5,
+            },
+            scale: 1.5,
+        })
+
+        gsap.to('#bg',{
+            scrollTrigger : {
+                scrub: 0.5,
+            },
+            scale: 1.5,
+        })
+
+    </script>
+</body>
+</html>
