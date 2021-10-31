@@ -16,12 +16,14 @@ section{
     height: 100vh;
     overflow: hidden;
     -webkit-box-reflect: below 1px linear-gradient(180deg, transparent, transparent, #0005);//反射 180%時看起來就跟鏡像一樣
+    z-index: 100;
 
     img{
         position: absolute;
         top: 0;
         left: 0;
-        max-width: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     &::before{
@@ -29,18 +31,15 @@ section{
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 100%;
+        height: 10vh;
         background: linear-gradient(to top,rgba(1, 4, 5,0.5),transparent);
         z-index: 1000;
-    }
-    #bats{
-        z-index: 15;
     }
 }
 
 .sec{
     position: relative;
-    padding: 100px;
+    padding: 5vh;
     text-align: center;
 
     h2{
@@ -60,5 +59,17 @@ section{
         letter-spacing: 0.1rem;
         line-height: 1.5;
         font-family: consolas;//固定大小的內建字體
+    }
+}
+
+@media (max-width:540px) {
+    .sec{
+        h2{
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: 1rem;
+        }
     }
 }
