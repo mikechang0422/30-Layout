@@ -1,0 +1,141 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Cookie', cursive;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #333;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h2 {
+  font-size: 8vw;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: transparent;
+  font-family: 'DM Sans', sans-serif;
+}
+
+h2 span {
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
+}
+
+h2 span:nth-child(5) {
+  margin-left: 1rem;
+}
+
+h2 span:nth-child(8) {
+  margin-left: 1rem;
+}
+
+h2 span:nth-child(10) {
+  margin-left: 1rem;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    color: #fff;
+    -webkit-filter: blur(1px) hue-rotate(0deg) grayscale(80%);
+            filter: blur(1px) hue-rotate(0deg) grayscale(80%);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff;
+  }
+  30%, 90% {
+    -webkit-transform: translateY(2rem) scale(0.5);
+            transform: translateY(2rem) scale(0.5);
+    color: #fff;
+    -webkit-filter: blur(1px) hue-rotate(360deg);
+            filter: blur(1px) hue-rotate(360deg);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-filter: blur(0px) hue-rotate(0deg) grayscale(80%);
+            filter: blur(0px) hue-rotate(0deg) grayscale(80%);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    color: #fff;
+    -webkit-filter: blur(1px) hue-rotate(0deg) grayscale(80%);
+            filter: blur(1px) hue-rotate(0deg) grayscale(80%);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff;
+  }
+  30%, 90% {
+    -webkit-transform: translateY(2rem) scale(0.5);
+            transform: translateY(2rem) scale(0.5);
+    color: #fff;
+    -webkit-filter: blur(1px) hue-rotate(360deg);
+            filter: blur(1px) hue-rotate(360deg);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-filter: blur(0px) hue-rotate(0deg) grayscale(80%);
+            filter: blur(0px) hue-rotate(0deg) grayscale(80%);
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    display: none;
+  }
+  .column {
+    display: block;
+  }
+  .column h2 {
+    font-size: 15vw;
+    margin-bottom: 1vh;
+  }
+}
+
+@media (min-width: 767px) {
+  .row {
+    display: block;
+  }
+  .column {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Day29.css.map */

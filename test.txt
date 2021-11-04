@@ -1,0 +1,260 @@
+<div class="main-container">
+    <!-- 內容區塊 Start -->
+    <div class="sub-header">
+        <h2>
+            <span>EC待處理事項(採購)</span>
+        </h2>
+        <div class="locationWrap">
+            <a href="Project-List.html">待處理零件清單</a>
+            <i class="fa fa-angle-right"></i>
+            <a href="Project-FSList.html">KD區分、擔當指派、維護成本/費用、簽核作業</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="topTool">
+            <div class="floatL">
+            </div>
+            <div class="floatR">
+            </div>
+        </div>
+        <div class="topTool">
+            <div class="floatL">
+                <h3 class="marginTmax">採購維護畫面</h3>
+            </div>
+            <div class="floatR">
+                @*<input type="text" placeholder="請輸入件號">
+                <a class="linkbtn" href="#" value="件號查詢" target="_block">件號查詢</a>*@
+                <form id="searchForm" class="searchItem form-row" autocomplete="off">
+                    @Html.TextBoxFor(o => o.Keywords, new { placeholder = "請輸入件號" })
+                    @*<input type="text" placeholder="請輸入件號">*@
+                    <input type="submit" value="件號查詢">
+                </form>
+
+            </div>
+        </div>
+
+        <table class="adminTable">
+            @Html.Action("PLM_Edit_SourcingUp", new { IDX = Model.IDXs, keyword = Model.Keywords })
+        </table>
+
+        <hr />
+        <div class="topTool">
+            <div class="floatL">
+                <h3 class="marginTmax">零件履歷</h3>
+            </div>
+            <div class="floatR">
+                <a class='linkbtn' href="">EC檢視</a>
+            </div>
+        </div>
+        <table class="adminTable">
+            @Html.Action("PartList", new { EcNos = Model.EcNos })
+        </table>
+
+        <hr />
+        <h3 class="marginTmax">維護明細</h3>
+        <form id="editForm" method="post" action="@Url.Action("SendECSourcing","Project")" enctype="multipart/form-data">
+            @Html.HiddenFor(x => x.IDXs)
+            @Html.HiddenFor(x => x.EcNos)
+            @Html.HiddenFor(x => x.EcAis)
+            @Html.HiddenFor(x => x.Keywords)
+            @Html.HiddenFor(x => x.IsState)
+            @Html.HiddenFor(x => x.IsManager)
+            @Html.HiddenFor(x => x.IsInCharge)
+            @Html.HiddenFor(x => x.VendorName)
+            @Html.HiddenFor(x => x.Rate, new { id = "Rate" })
+            @Html.HiddenFor(x => x.CreateTime)
+            @Html.HiddenFor(x => x.CreateUser)
+            @Html.HiddenFor(x => x.UpdateTime)
+            @Html.HiddenFor(x => x.UpdateUser)
+            @if (Model.IsState == 5 && Model.IsInCharge)
+            {
+                <table class="adminTable overflowBoxRWD">
+                    <tr>
+                        <th width="7%">幣值</th>
+                        <th width="7%">新件號單價</th>
+                        <th width="7%">新件號目標價</th>
+                        <th width="10%">估價說明</th>
+                        <th width="5%">價差</th>
+                        <th colspan="2">成本異動分類</th>
+                        <th width="7%">價格階段</th>
+                        <th width="7%">外包日期</th>
+                        <th>廠商</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            @Html.DropDownListFor(m => m.CurrencyType, Model.CurrencyValueSelectListItems, new { @onchange = "cvChange(this.value)" , @class = "selectpicker form-control" })
+                        </td>
+                        <td rowspan="2">
+                            <input id="UnitPrice" name="UnitPrice" type="number" class="form-control w-100" value="@Model.UnitPrice" maxlength="100">
+                        </td>
+                        <td rowspan="2">
+                            <input id="TargetPrice" name="TargetPrice" type="number" class="form-control w-100" value="@Model.TargetPrice" maxlength="100">
+                        </td>
+                        <td rowspan="2">
+                            <input id="Memo" name="Memo" type="text" class="form-control w-100" value="@Model.Memo" maxlength="100">
+                        </td>
+                        <td rowspan="2">
+                            <span id="PriceDiff">
+                                @Html.DisplayFor(m => m.PriceDiff, new { @class = "w100" })
+                            </span>
+                        </td>
+                        <td class="textNowrap">議價效益 <input id="BargainingEfficiency" name="BargainingEfficiency" type="number" class="form-control w-100" value="@Model.BargainingEfficiency" maxlength="100" onchange="sumDiff()"></td>
+                        <td class="textNowrap">VAVE <input id="VAVE" name="VAVE" type="number" class="form-control w-100" value="@Model.VAVE" maxlength="100" onchange="sumDiff()"></td>
+                        <td rowspan="2">
+                            @Html.DropDownListFor(m => m.PriceStage, Model.PriceStageSelectListItems, new { @class = "selectpicker form-control" })
+                        </td>
+                        <td rowspan="2">
+                            @if (Model.OutsourcingDate != null)
+                            {
+                                Convert.ToDateTime(Model.OutsourcingDate).ToString("yyyy/MM/dd");
+                            }
+                            <!-- datetimepicker 日期 Start -->
+                            <div class="datetimepickerWrap">
+                                <div class='input-group date datetimepicker__ymd'>
+                                    @if (Model.OutsourcingDate != null)
+                                    {
+                                        <input type='text' class="form-control" id="OutsourcingDate" , name="OutsourcingDate" value="@Convert.ToDateTime(Model.OutsourcingDate).ToString("yyyy/MM/dd")" />
+                                    }
+                                    else
+                                    {
+                                        <input type='text' class="form-control" id="OutsourcingDate" , name="OutsourcingDate" />
+                                    }
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- datetimepicker 日期 End -->
+                        </td>
+                        <td rowspan="2">
+                            <input id="VendorCode" class="w100 maxw200" name="VendorCode" type="text" placeholder='輸入ERP系統廠商代碼' value="@Model.VendorCode"  onchange="setEmpty()">
+                            <input id="VendorCheck" type="button" value="查詢">
+                            <br>
+                            @*<span id="VendorName"></span>*@
+                            <span id="VendorName">
+                                @Html.DisplayFor(m => m.VendorName, new { @class = "w100", id = "VendorName", name = "VendorName" })
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textNowrap">設計變更 <input id="DesignChange" name="DesignChange" type="number" class="form-control w-100" value="@Model.DesignChange" maxlength="100" onchange="sumDiff()"></td>
+                        <td class="textNowrap">式樣變更 <input id="StyleChange" name="StyleChange" type="number" class="form-control w-100" value="@Model.StyleChange" maxlength="100" onchange="sumDiff()"></td>
+                    </tr>
+                </table>
+            }
+            else
+            {
+                <table class="adminTable">
+                    <tr>
+                        <th width="7%">幣值</th>
+                        <th width="7%">新件號單價</th>
+                        <th width="7%">新件號目標價</th>
+                        <th width="10%">估價說明</th>
+                        <th width="5%">價差</th>
+                        <th colspan="4">成本異動分類</th>
+                        <th width="7%">價格階段</th>
+                        <th width="7%">外包日期</th>
+                        <th>廠商</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(o => o.CurrencyType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(o => o.UnitPrice)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(o => o.TargetPrice)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(o => o.Memo)
+                        </td>
+                        <td>
+                            <span id="PriceDiff">
+                                @Html.DisplayFor(m => m.PriceDiff, new { @class = "w100" })
+                            </span>
+                        </td>
+                        <td style="min-width:90px;">
+                            議價效益
+
+                            @Html.DisplayFor(o => o.BargainingEfficiency)
+                        </td>
+                        <td style="min-width:66px;">VAVE @Html.DisplayFor(o => o.VAVE)</td>
+                        <td style="min-width:90px;">設計變更 @Html.DisplayFor(o => o.DesignChange)</td>
+                        <td style="min-width:90px;">式樣變更 @Html.DisplayFor(o => o.StyleChange)</td>
+                        <td>
+                            @Html.DisplayFor(o => o.PriceStageStr)
+                        </td>
+                        <td>
+                            <!-- datetimepicker 日期 Start -->
+                            <div class="datetimepickerWrap">
+                                <div class='input-group date datetimepicker__ymd'>
+                                    @*@Html.DisplayFor(o => o.OutsourcingDate)*@
+
+                                    @if (Model.OutsourcingDate != null)
+                                    {
+                                        @Convert.ToDateTime(Model.OutsourcingDate).ToString("yyyy/MM/dd")
+                                    }
+                                </div>
+                            </div>
+                            <!-- datetimepicker 日期 End -->
+                        </td>
+                        <td>
+                            @Html.DisplayFor(o => o.VendorCode)
+                        </td>
+                    </tr>
+                </table>
+            }
+            <hr />
+
+            <div class="topTool">
+                <div class="floatL">
+                    <h3>簽核紀錄</h3>
+                </div>
+                <div class="floatR"></div>
+            </div>
+            <table class="adminTable">
+                <tr>
+                    <th>維護人員</th>
+                    <th>維護日期</th>
+                    <th>備註</th>
+                    <th>狀態</th>
+                </tr>
+                @foreach (var row in Model.ec_SignModels)
+                {
+                    <tr>
+                        <td>@row.SignAccount</td>
+                        <td>@row.SignDate</td>
+                        <td>@row.SignMemo</td>
+                        <td>@row.SignState</td>
+                    </tr>
+                }
+            </table>
+            @if (Model.IsState == 6)
+            {
+                <hr>
+                <h3>備註</h3>
+                <textarea name="" id="SignMemo" cols="30" rows="10"></textarea>
+                <hr>
+            }
+
+            <hr />
+            <div class="bottomTool">
+                @*<input type="submit" value="取消">*@
+
+                @if (Model.IsState == 5 && Model.IsInCharge)
+                {
+                    <input type="button" value="取消" onclick="window.location.href=window.location.href" class="linkbtn2">
+                    <button id="btn-submit" form="addForm">送簽</button>
+                    @*<input type="submit" value="送簽">*@
+                }
+                else if (Model.IsState == 6 && Model.IsManager)
+                {
+                    <input type="button" value="簽核" onclick="Sign(0)" class="linkbtn2">
+                    <input type="button" value="退回" onclick="Sign(1)" class="linkbtn2">
+                }
+            </div>
+        </form>
+    </div>
+    <!-- 內容區塊 End -->
+</div>
