@@ -66,8 +66,8 @@ h2 span:nth-child(10) {
     -webkit-transform: translateY(0) scale(1);
             transform: translateY(0) scale(1);
     color: #fff;
-    -webkit-filter: blur(1px) hue-rotate(0deg) grayscale(80%);
-            filter: blur(1px) hue-rotate(0deg) grayscale(80%);
+    -webkit-filter: blur(1px) hue-rotate(0deg);
+            filter: blur(1px) hue-rotate(0deg);
     text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff;
   }
   30%, 90% {
@@ -84,8 +84,8 @@ h2 span:nth-child(10) {
     color: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
-    -webkit-filter: blur(0px) hue-rotate(0deg) grayscale(80%);
-            filter: blur(0px) hue-rotate(0deg) grayscale(80%);
+    -webkit-filter: blur(0px) hue-rotate(0deg);
+            filter: blur(0px) hue-rotate(0deg);
   }
 }
 
@@ -94,8 +94,8 @@ h2 span:nth-child(10) {
     -webkit-transform: translateY(0) scale(1);
             transform: translateY(0) scale(1);
     color: #fff;
-    -webkit-filter: blur(1px) hue-rotate(0deg) grayscale(80%);
-            filter: blur(1px) hue-rotate(0deg) grayscale(80%);
+    -webkit-filter: blur(1px) hue-rotate(0deg);
+            filter: blur(1px) hue-rotate(0deg);
     text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff;
   }
   30%, 90% {
@@ -112,8 +112,8 @@ h2 span:nth-child(10) {
     color: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
-    -webkit-filter: blur(0px) hue-rotate(0deg) grayscale(80%);
-            filter: blur(0px) hue-rotate(0deg) grayscale(80%);
+    -webkit-filter: blur(0px) hue-rotate(0deg);
+            filter: blur(0px) hue-rotate(0deg);
   }
 }
 
