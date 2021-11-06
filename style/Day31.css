@@ -38,6 +38,11 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  z-index: 2;
+  pointer-events: none;
+}
+
+h2 span {
   font-size: 5rem;
   font-weight: 700px;
   letter-spacing: 3px;
@@ -46,17 +51,16 @@ h2 {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#333a), color-stop(#fac), to(#333a));
-  background-image: linear-gradient(to bottom, #333a, #fac, #333a);
-  z-index: 2;
-  pointer-events: none;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #333a;
-          text-decoration-color: #333a;
-}
-
-h2 span {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fac), color-stop(#666a), to(#333c));
+  background-image: linear-gradient(to bottom, #fac, #666a, #333c);
   padding-bottom: 2rem;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #333c;
+          text-decoration-color: #333c;
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+  -webkit-animation-delay: calc(0.5s * var(--i));
+          animation-delay: calc(0.5s * var(--i));
 }
 
 h2 span + span {
@@ -109,8 +113,44 @@ h2 span + span {
   cursor: pointer;
 }
 
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
   h2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  h2 span {
     font-size: 3rem;
   }
   .container {
@@ -124,7 +164,7 @@ h2 span + span {
 }
 
 @media (max-width: 540px) {
-  h2 {
+  h2 span {
     font-size: 2rem;
   }
   .container {

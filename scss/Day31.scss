@@ -20,22 +20,24 @@ h2{
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    font-size: 5rem;
-    font-weight: 700px;
-    letter-spacing: 3px;
-    font-family: 'Cookie', cursive;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: linear-gradient(to bottom ,#333a,#fac,#333a);
     z-index: 2;
     pointer-events: none;
-    text-decoration: underline;
-    text-decoration-color: #333a;
-
+    
     span{
+        font-size: 5rem;
+        font-weight: 700px;
+        letter-spacing: 3px;
+        font-family: 'Cookie', cursive;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(to bottom ,#fac,#666a,#333c);
         padding-bottom: 2rem;
+        text-decoration: underline;
+        text-decoration-color: #333c;
+        animation: animate 1s linear infinite;
+        animation-delay: calc(0.5s * var(--i));
 
         + span{
             margin-left: 1rem;
@@ -80,9 +82,25 @@ h2{
     }
 }
 
+@keyframes animate {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(1rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 @media (max-width:768px) {
     h2{
-        font-size: 3rem;
+        flex-direction: column;
+
+        span{
+            font-size: 3rem;
+        }
     }
     .container{
         width: 450px;
@@ -97,7 +115,9 @@ h2{
 
 @media (max-width:540px) {
     h2{
-        font-size: 2rem;
+        span{
+            font-size: 2rem;
+        }
     }
     .container{
         width: 300px;
