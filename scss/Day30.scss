@@ -1,0 +1,174 @@
+@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Cookie', cursive;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #333;
+}
+
+main{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ring{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: -60px;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        border-top: 4px solid #ffa;
+        animation: animate 4s linear infinite;
+
+        
+        &::before{
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #ffa;
+            top: 24px;
+            right: 24px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 5px #ffffaaaa,
+            0 0 0 15px #ffffaa77,
+            0 0 0 20px #ffffaa55,
+            0 0 0 25px #ffffaa33,
+            0 0 0 30px #ffffaa22,
+            0 0 0 35px #ffffaa11;
+        }
+
+        &:nth-child(2){
+            animation: animate2 4s linear infinite;
+            border-top: 4px solid #faa;
+            animation-delay: 0.5s;
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background-color: #faa;
+                bottom: 24px;
+                left: 24px;
+                border-radius: 50%;
+                box-shadow: 0 0 0 5px #ffaaaaaa,
+                0 0 0 15px #ffaaaa77,
+                0 0 0 20px #ffaaaa55,
+                0 0 0 25px #ffaaaa33,
+                0 0 0 30px #ffaaaa22,
+                0 0 0 35px #ffaaaa11;
+            }
+    
+        }
+
+        &:nth-child(3){
+            position: absolute;
+            top: -33%;
+            border-top: 4px solid transparent;
+            border-left: 4px solid #afa;
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background-color: #afa;
+                top: 24px;
+                left: 24px;
+                border-radius: 50%;
+                box-shadow: 0 0 0 5px #aaffaaaa,
+                0 0 0 15px #aaffaa77,
+                0 0 0 20px #aaffaa55,
+                0 0 0 25px #aaffaa33,
+                0 0 0 30px #aaffaa22,
+                0 0 0 35px #aaffaa11;
+            }
+        }
+    }
+
+}
+p{
+    position: relative;
+    font-size: 4rem;
+    font-family: 'Cookie', cursive;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin-top: 10%;
+    animation: animateP 4s linear infinite;
+
+
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes animateP {
+    0%{
+        color: #afa;
+        text-shadow: 3px 3px 5px #afaa;
+
+    }
+    33%{
+        color: #ffa;
+        text-shadow: 3px 3px 5px #ffaa;
+
+    }
+    66%{
+        color: #faa;
+        text-shadow: 3px 3px 5px #faaa;
+
+    }
+    100%{
+        color: #afa;
+        text-shadow: 3px 3px 5px #afaa;
+    }
+
+}
+
+@media (max-width:768px) {
+    main{
+        transform: scale(0.7);
+    }
+    p{
+        font-size: 3rem;
+        margin-top: 20%;
+    }
+}
+
+@media (max-width:540px) {
+    main{
+        transform: scale(0.6);
+    }
+    p{
+        font-size: 2rem;
+        margin-top: 30%;
+    }
+}
