@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hent-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/Day32.css">
+    <title>30 LAYOUT-Day32 Parallax Scrolling Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">work</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="./images/Day32/stars.png" class="stars">
+        <img src="./images/Day32/moon.png" class="moon">
+        <img src="./images/Day32/mountains_behind.png" class="mountains_behind">
+        <h2 class="rocket">
+            <i class="fas fa-rocket"></i>
+            <i class="fas fa-rocket"></i>
+            <i class="fas fa-rocket"></i>
+            <i class="fas fa-rocket"></i>
+            <i class="fas fa-rocket"></i>
+            <i class="fas fa-rocket"></i>
+        </h2>
+        <a href="#sec" class="btn">Check Me</a>
+        <img src="./images/Day32/mountains_front.png" class="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eveniet sint debitis sit laboriosam accusamus quo ipsa sequi dolores at. Iure repellat accusantium ratione totam vel ipsa officia repellendus! Quo.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora atque aliquam ea a aspernatur modi, iste earum tempore minima temporibus debitis quisquam obcaecati, in placeat pariatur aut libero nam expedita!</p>
+    </div>
+
+    <script>
+        let stars = document.querySelector('.stars');
+        let moon = document.querySelector('.moon');
+        let mountains_behind = document.querySelector('.mountains_behind');
+        let mountains_front = document.querySelector('.mountains_front');
+        let rocket = document.querySelector('.rocket');
+        let btn = document.querySelector('.btn');
+        let header = document.querySelector('header');
+
+        function scrollHandler (){
+            let windowScrollY = window.scrollY;
+            stars.style.left = windowScrollY * 0.25 + 'px';
+            moon.style.top = windowScrollY + 'px';
+            mountains_behind.style.top = windowScrollY * 0.5 + 'px';
+            mountains_front.style.top = windowScrollY * 0 +'px';
+            rocket.style.marginRight = windowScrollY * 4 + 'px';
+            rocket.style.marginTop = windowScrollY * 1.5 + 'px';
+            btn.style.marginTop = windowScrollY * 1.2 + 'px';
+            header.style.top = windowScrollY + 'px';
+        }
+
+        window.addEventListener('scroll',scrollHandler);
+    </script>
+</body>
+</html>

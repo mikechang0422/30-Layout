@@ -1,0 +1,278 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Cookie', cursive;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2b1055), to(#7597de));
+  background: linear-gradient(#2b1055, #7597de);
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 3rem;
+  text-shadow: 0.3rem 0.3rem 0.5rem #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 1.5rem;
+}
+
+header ul li a {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0.3rem 0.3rem 0.5rem #fff;
+  color: #fff;
+  border-radius: 1.5rem;
+}
+
+header ul li a:hover, header ul li a.active {
+  color: #2b1055;
+  text-shadow: none;
+  background: #fff;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  padding: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+
+section img.moon {
+  mix-blend-mode: screen;
+  z-index: 10;
+}
+
+section img.mountains_behind {
+  z-index: 20;
+}
+
+section img.mountains_front {
+  z-index: 50;
+}
+
+section .rocket {
+  position: absolute;
+  right: -100vw;
+  color: #0ff;
+  font-size: 8rem;
+  white-space: nowrap;
+  z-index: 40;
+  pointer-events: none;
+  -webkit-text-stroke: 2px #333;
+}
+
+section .rocket i {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+section .rocket i + i {
+  margin-left: 8rem;
+}
+
+section .rocket i:nth-child(2n) {
+  color: #f0f;
+}
+
+section .rocket i:nth-child(3n) {
+  color: #ff0;
+}
+
+section .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: #2b1055;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  background: #fff;
+  z-index: 50;
+  -webkit-transform: translateY(8rem);
+          transform: translateY(8rem);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+section .btn:hover {
+  padding: 1rem 3rem;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  background: #2b1055;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#1c0522), to(transparent));
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 100;
+}
+
+.sec {
+  height: 100vh;
+  position: relative;
+  padding: 100px;
+  background: #1c0522;
+}
+
+.sec h2 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  color: #fff;
+}
+
+.sec p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 50px;
+  }
+  header .logo {
+    font-size: 2rem;
+  }
+  header ul li + li {
+    margin-left: 2rem;
+  }
+  section {
+    height: 100vh;
+  }
+  section .rocket {
+    right: -210vw;
+    font-size: 6rem;
+  }
+  section .btn {
+    font-size: 1rem;
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+  section::before {
+    height: 50px;
+  }
+  .sec {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 540px) {
+  header {
+    padding: 10px 15px;
+  }
+  header ul li {
+    margin-top: 1rem;
+  }
+  header ul li a {
+    padding: 10px 10px;
+    border-radius: 20px;
+  }
+  header ul li + li {
+    margin-left: 5px;
+  }
+  section .rocket {
+    right: -210vw;
+    font-size: 4rem;
+  }
+  section .btn {
+    padding: 10px;
+    font-size: 1rem;
+    -webkit-transform: translateY(10rem);
+            transform: translateY(10rem);
+  }
+  section::before {
+    height: 20px;
+  }
+  .sec {
+    padding: 20px;
+  }
+  .sec h2 {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=Day32.css.map */
