@@ -1,0 +1,172 @@
+@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Cookie', cursive;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222;
+    
+}
+
+h1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    font-family: 'Cookie', cursive;
+    letter-spacing: -0.3rem;
+    color: #333;
+
+    &::before,&::after{
+        content: attr(data-spotlight);
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: transparent;
+        background-image: url(https://images.unsplash.com/photo-1624115643008-a6833592943e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
+        background-size: 150%;
+        background-position: center center;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    &::before{
+        animation: spotlight 7s linear infinite;
+    }
+
+    &::after{
+        animation: spotlight2 5s linear infinite;
+
+    }
+}
+
+@keyframes spotlight {
+    0%,100%{
+        clip-path: ellipse(8rem 8rem at 0% 100%);
+        -webkit-clip-path: ellipse(8rem 8rem at 0% 100%);
+        filter: hue-rotate(0deg);
+    }
+
+
+    50%{
+        clip-path: ellipse(6rem 6rem at 60% 60%);
+        -webkit-clip-path: ellipse(6rem 6rem at 60% 60%);
+        filter: hue-rotate(360deg);
+    }
+
+
+}
+
+@keyframes spotlight2 {
+    0%,100%{
+        clip-path: ellipse(6rem 6rem at 100% 100%);
+        -webkit-clip-path: ellipse(6rem 6rem at 100% 100%);
+        filter: hue-rotate(0deg);
+
+    }
+
+    50%{
+        clip-path: ellipse(8rem 8rem at 30% 30%);
+        -webkit-clip-path: ellipse(8rem 8rem at 30% 30%);
+        filter: hue-rotate(180deg);
+
+    }
+}
+
+@media (max-width:768px) {
+    h1{
+        font-size: 4rem;
+    }
+
+    @keyframes spotlight {
+        0%,100%{
+            clip-path: ellipse(6rem 6rem at 0% 100%);
+            -webkit-clip-path: ellipse(6rem 6rem at 0% 100%);
+            filter: hue-rotate(0deg);
+        }
+    
+    
+        50%{
+            clip-path: ellipse(4rem 4rem at 60% 60%);
+            -webkit-clip-path: ellipse(4rem 4rem at 60% 60%);
+            filter: hue-rotate(360deg);
+        }
+    
+    
+    }
+    
+    @keyframes spotlight2 {
+        0%,100%{
+            clip-path: ellipse(4rem 4rem at 100% 100%);
+            -webkit-clip-path: ellipse(4rem 4rem at 100% 100%);
+            filter: hue-rotate(0deg);
+    
+        }
+    
+        50%{
+            clip-path: ellipse(6rem 6rem at 30% 30%);
+            -webkit-clip-path: ellipse(6rem 6rem at 30% 30%);
+            filter: hue-rotate(180deg);
+    
+        }
+    }
+    
+
+}
+
+@media (max-width:540px) {
+    h1{
+        font-size: 3rem;
+    }
+
+    @keyframes spotlight {
+        0%,100%{
+            clip-path: ellipse(3rem 3rem at 0% 100%);
+            -webkit-clip-path: ellipse(3rem 3rem at 0% 100%);
+            filter: hue-rotate(0deg);
+        }
+    
+    
+        50%{
+            clip-path: ellipse(2rem 2rem at 60% 60%);
+            -webkit-clip-path: ellipse(2rem 2rem at 60% 60%);
+            filter: hue-rotate(360deg);
+        }
+    
+    
+    }
+    
+    @keyframes spotlight2 {
+        0%,100%{
+            clip-path: ellipse(2rem 2rem at 100% 100%);
+            -webkit-clip-path: ellipse(2rem 2rem at 100% 100%);
+            filter: hue-rotate(0deg);
+    
+        }
+    
+        50%{
+            clip-path: ellipse(3rem 3rem at 30% 30%);
+            -webkit-clip-path: ellipse(3rem 3rem at 30% 30%);
+            filter: hue-rotate(180deg);
+    
+        }
+    }
+    
+
+}
